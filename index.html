@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Story - Discover Sacred Places Across India</title>
+    <meta name="description" content="Track your temple visits across India. Discover nearby temples, record your spiritual journey, and earn beautiful certificates.">
+    <meta name="keywords" content="temples, India, temple tracking, spiritual journey, pilgrimage, Hindu temples">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .hero .description {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #e67e22;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            font-size: 1em;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            font-size: 1.3em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Privacy Section */
+        .privacy-section {
+            padding: 60px 20px;
+            background: #e8f5e9;
+            text-align: center;
+        }
+
+        .privacy-section h2 {
+            font-size: 2em;
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+
+        .privacy-section p {
+            font-size: 1.1em;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.8;
+        }
+
+        .privacy-link {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .privacy-link:hover {
+            background: #229954;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+
+        .footer a {
+            color: #e67e22;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2em;
+            }
+
+            .hero .description {
+                font-size: 1em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .steps {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>🛕 Temple Story</h1>
+            <p class="subtitle">Discover Sacred Places Across India</p>
+            <p class="description">
+                Track your spiritual journey, discover nearby temples, and earn beautiful certificates for your temple visits. Your personal pilgrimage companion.
+            </p>
+            <a href="https://play.google.com/store/apps" class="cta-button" target="_blank">
+                📱 Get on Google Play
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Discover Nearby Temples</h3>
+                    <p>Find temples around you with our interactive map. Explore sacred places you never knew existed in your area.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👣</div>
+                    <h3>Track Your Visits</h3>
+                    <p>Automatically record your temple visits. Simply stay near a temple for 5-10 minutes and your visit is logged.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">❤️</div>
+                    <h3>Save Favorites</h3>
+                    <p>Mark temples as favorites to easily find and revisit your most cherished spiritual places.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Earn Certificates</h3>
+                    <p>Get beautiful pilgrimage certificates for your temple visits. Share your spiritual achievements with friends.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Track Progress</h3>
+                    <p>See how many temples you've visited. Set goals and challenge yourself to explore more sacred places.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>All your data stays on your device. We don't collect, store, or share your personal information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Enable Location</h3>
+                    <p>Turn on location tracking in the app. We only track when the app is open.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Visit a Temple</h3>
+                    <p>Go near a temple (within 100m) and stay for 5-10 minutes while the app is open.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Visit Recorded</h3>
+                    <p>Your visit is automatically saved to your device. View it anytime in the Visited tab.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Get Certificate</h3>
+                    <p>Export a beautiful certificate showing your temple visits. Save or share with pride!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Section -->
+    <section class="privacy-section">
+        <h2>🔒 Your Privacy Matters</h2>
+        <p>
+            Temple Story is designed with your privacy in mind. We use foreground-only location tracking, meaning we only access your location when the app is open and visible. All your temple visit data is stored locally on your device. We never collect, upload, or share your personal information.
+        </p>
+        <p>
+            <a href="privacy_policy.html" class="privacy-link">Read Full Privacy Policy</a>
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p><strong>Temple Story</strong></p>
+        <p>Discover Sacred Places Across India</p>
+        <p style="margin-top: 20px;">
+            <a href="privacy_policy.html">Privacy Policy</a> | 
+            <a href="mailto:sujith81159@gmail.com">Contact: sujith81159@gmail.com</a>
+        </p>
+        <p style="margin-top: 20px; opacity: 0.8;">
+            © 2025 Temple Story. All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>
