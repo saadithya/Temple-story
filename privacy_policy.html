@@ -327,16 +327,58 @@
             <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.</p>
 
             <h2>10. Google Play Store Compliance</h2>
-            
+
             <h3>10.1 Location Permission Declaration</h3>
-            <p>Temple Story requests foreground location permission to detect when users visit temples. This is a core feature of the app and is essential for its primary functionality.</p>
+            <p>Temple Story requests <strong>foreground-only</strong> location permission to detect when users visit temples. This is a core feature of the app and is essential for its primary functionality.</p>
 
             <h3>10.2 Prominent Disclosure</h3>
-            <p><strong>This app collects location data to detect temple visits even when the app is closed or not in use.</strong></p>
-            <p><em>Note: This statement is for Play Store compliance. In reality, our app only collects location when open and visible (foreground-only).</em></p>
+            <p><strong>This app collects location data to enable temple visit detection while the app is open and in use.</strong></p>
+
+            <p>Location tracking features:</p>
+            <ul>
+                <li>✅ <strong>Foreground-only</strong> - Works only when the app is open and visible</li>
+                <li>✅ <strong>User-controlled</strong> - Enable/disable at any time from app settings</li>
+                <li>✅ <strong>Device-local</strong> - Location data is processed on your device and NOT transmitted to servers</li>
+                <li>✅ <strong>Optional</strong> - You can use the app without enabling location tracking</li>
+            </ul>
+
+            <p><strong>We do NOT collect location data when:</strong></p>
+            <ul>
+                <li>❌ The app is closed</li>
+                <li>❌ The app is running in the background</li>
+                <li>❌ Location tracking is disabled by the user</li>
+            </ul>
 
             <h3>10.3 Primary Functionality</h3>
             <p>Location access is essential to the app's core functionality of detecting and recording temple visits. Without location access, the app cannot determine when you are near a temple.</p>
+
+            <h3>10.4 Background Location</h3>
+            <p><strong>This app does NOT request, collect, or use background location data.</strong> Location tracking is automatically disabled when the app is closed or running in the background. We only use foreground location APIs.</p>
+
+            <h3>10.5 Permissions Requested</h3>
+            <table class="permission-table">
+                <thead>
+                    <tr>
+                        <th>Permission</th>
+                        <th>Type</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ACCESS_FINE_LOCATION</td>
+                        <td>Foreground Only</td>
+                        <td>Detect temple visits with high accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>ACCESS_COARSE_LOCATION</td>
+                        <td>Foreground Only</td>
+                        <td>Backup location detection</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>We do NOT request:</strong> ACCESS_BACKGROUND_LOCATION or any background location permissions.</p>
 
             <div class="contact-box">
                 <h3>📧 Contact Us</h3>
